@@ -5,10 +5,25 @@ import ColorCounter from "../components/ColorCounter";
 const reducer = (state, action) => {
   switch (action.type) {
     case "red":
+      if (state.red + action.payload > 255 || state.red + action.payload < 0) {
+        return state;
+      }
       return { ...state, red: state.red + action.payload };
     case "green":
+      if (
+        state.green + action.payload > 255 ||
+        state.green + action.payload < 0
+      ) {
+        return state;
+      }
       return { ...state, green: state.green + action.payload };
     case "blue":
+      if (
+        state.blue + action.payload > 255 ||
+        state.blue + action.payload < 0
+      ) {
+        return state;
+      }
       return { ...state, blue: state.blue + action.payload };
     default:
       return state;
