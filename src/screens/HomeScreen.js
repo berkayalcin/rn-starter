@@ -47,6 +47,12 @@ const HomeScreen = ({ navigation }) => {
         }}
         title="Go To Square Reducer Demo"
       ></Button>
+      <Button
+        onPress={() => {
+          navigation.navigate("Text");
+        }}
+        title="Go To Text Screen Demo"
+      ></Button>
       <TouchableOpacity
         onPress={() => {
           alert("no action !");
